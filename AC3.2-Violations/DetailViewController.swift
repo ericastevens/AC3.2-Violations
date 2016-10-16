@@ -9,8 +9,54 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    
+    @IBOutlet weak var dba: UILabel!
+    @IBOutlet weak var cuisineDescription: UILabel!
+    @IBOutlet weak var address: UILabel!
+    @IBOutlet weak var boroZipcode: UILabel!
+    @IBOutlet weak var phoneNumber: UILabel!
+    @IBOutlet weak var score: UILabel!
+    @IBOutlet weak var inspectionDate: UILabel!
+    @IBOutlet weak var inspectionType: UILabel!
+    @IBOutlet weak var criticalFlag: UILabel!
+    @IBOutlet weak var action: UILabel!
+    @IBOutlet weak var violationDescription: UILabel!
+    @IBOutlet weak var violationCode: UILabel!
+    
+    var dbaString = ""
+    var cuisineDescriptionString = ""
+    var addressString = ""
+    var boroZipcodeString = ""
+    var phoneNumberString = ""
+    var scoreString = ""
+    var inspectionDateString = ""
+    var inspectionTypeString = ""
+    var criticalFlagString = ""
+    var actionString = ""
+    var violationDescriptionString = ""
 
     override func viewDidLoad() {
+        dba.text = dbaString
+        cuisineDescription.text = cuisineDescriptionString
+        address.text = addressString
+        boroZipcode.text = boroZipcodeString
+        phoneNumber.text = phoneNumberString
+        score.text = scoreString
+        inspectionDate.text = inspectionDateString
+        inspectionType.text = inspectionTypeString
+        criticalFlag.text = criticalFlagString
+                        switch criticalFlagString {
+                        case "Not Critical":
+                            criticalFlag.textColor = UIColor.white
+                        case "Critical":
+                            criticalFlag.backgroundColor = UIColor.red
+                            criticalFlag.textColor = UIColor.white
+                        default:
+                            break
+                        }
+
+        action.text = actionString
+        violationDescription.text = violationDescriptionString
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

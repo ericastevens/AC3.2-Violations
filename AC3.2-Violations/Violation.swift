@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Violations {
+class Violation {
     let action: String
     let boro: String
     let buildingNumber: String

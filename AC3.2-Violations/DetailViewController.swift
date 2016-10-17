@@ -10,6 +10,8 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    //Things left to do: Annotate with comments, try and add some auto-layout and scroling for portrait orientation
+    
     @IBOutlet weak var dba: UILabel!
     @IBOutlet weak var cuisineDescription: UILabel!
     @IBOutlet weak var address: UILabel!
